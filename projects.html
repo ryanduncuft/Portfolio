@@ -1,124 +1,102 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Ryan Duncuft</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Projects • Ryan Duncuft</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              'inter': ['Inter', 'sans-serif'],
-              'playfair': ['Playfair Display', 'serif'],
-            }
-          }
-        }
-      }
-    </script>
-    
-    <link rel="stylesheet" href="css/input.css">
-    <link rel="icon" href="images/logos/WebpageIcon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="images/logos/WebpageIcon.ico" type="image/x-icon" />
 </head>
 
-<body class="bg-zinc-900 text-zinc-50 font-inter antialiased" data-theme="dark">
-
-    <div class="loader">
-        <div class="loader-text text-zinc-50">Loading...</div>
-        <div class="loader-bar">
-            <div class="loader-progress"></div>
-        </div>
+<body class="dark-mode" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark border-bottom">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold fs-5" href="index.html">Ryan Duncuft</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#projects">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 space-y-12 md:space-y-20">
+  <main class="mt-navbar py-5">
+    <section class="container">
+      <div class="text-center mb-5">
+        <h1 class="display-6 fw-bold">Selected Projects</h1>
+        <p class="text-muted">A curated list of recent work focusing on stable performance, polished UI, and responsive build.</p>
+      </div>
 
-        <header id="navbar-container" class="relative z-50"></header>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <article class="col">
+          <div class="card project-card h-100 border-0 shadow-sm overflow-hidden">
+            <img src="images/projects/rtk.png" loading="lazy" decoding="async" class="card-img-top" alt="Ryze Tha Kidd project" />
+            <div class="card-body">
+              <h2 class="h5">Ryze Tha Kidd Artist Website</h2>
+              <p class="text-secondary">Completed responsive website for music branding and streaming presentation.</p>
+              <small class="text-pink">Bootstrap • JavaScript</small>
+            </div>
+            <div class="card-footer bg-transparent border-top-0 d-flex gap-2">
+              <a href="https://ryzethakidd.netlify.app" target="_blank" class="btn btn-outline-pink btn-sm flex-fill">Live</a>
+              <a href="https://github.com/ryanduncuft/RTK" target="_blank" class="btn btn-outline-secondary btn-sm flex-fill">Code</a>
+            </div>
+          </div>
+        </article>
 
-        <main class="space-y-12 md:space-y-20">
+        <article class="col">
+          <div class="card project-card h-100 border-0 shadow-sm overflow-hidden">
+            <img src="images/projects/reflex interactive.png" loading="lazy" decoding="async" class="card-img-top" alt="Reflex Interactive project" />
+            <div class="card-body">
+              <h2 class="h5">Reflex Interactive Studio</h2>
+              <p class="text-secondary">Studio-style website with modern design, content blocks, and performance optimization.</p>
+              <small class="text-pink">Bootstrap • UX</small>
+            </div>
+            <div class="card-footer bg-transparent border-top-0 d-flex gap-2">
+              <a href="https://reflexinteractive.netlify.app" target="_blank" class="btn btn-outline-pink btn-sm flex-fill">Live</a>
+              <a href="https://github.com/ryanduncuft/Reflex-Interactive-Website.git" target="_blank" class="btn btn-outline-secondary btn-sm flex-fill">Code</a>
+            </div>
+          </div>
+        </article>
 
-            <section id="projects" class="py-24 px-6 md:px-12 bg-zinc-800/30 rounded-xl" data-anim-section>
-                
-                <div class="max-w-6xl mx-auto mb-12">
-                    <a href="index.html" class="inline-flex items-center gap-2 text-zinc-400 hover:text-sky-400 transition-colors">
-                        <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-                        Back to Home
-                    </a>
-                </div>
-                
-                <h2 class="section-title text-4xl md:text-5xl font-playfair font-bold text-center mb-16">Projects</h2>
-                
-                <div class="flex flex-col gap-8 max-w-6xl mx-auto">
-                    
-                    <div data-anim-item class="group bg-zinc-800 border border-zinc-700 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-sky-500/50 hover:shadow-xl hover:shadow-sky-500/10 flex flex-col md:flex-row">
-                        <div class="overflow-hidden md:w-1/3 lg:w-2/5 flex-shrink-0">
-                            <img src="images/Projects/rtk.png" alt="Ryze Tha Kidd Artist Website" class="w-full h-48 md:h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        </div>
-                        <div class="p-6 space-y-4 flex-1 flex flex-col">
-                            <h3 class="text-2xl font-semibold text-white">Ryze Tha Kidd Artist Website</h3>
-                            <p class="text-zinc-300 leading-relaxed flex-grow">A personal music website showcasing all of my music, videos, and more. Built for a fast, responsive user experience.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="tech-tag">Tailwind CSS</span>
-                            </div>
-                            <div class="flex space-x-4 pt-2">
-                                <a href="https://ryzethakidd.netlify.app" target="_blank" class="flex-1 py-2 px-4 bg-sky-500 text-white text-center font-bold rounded-lg transition-colors hover:bg-sky-600">Live Website</a>
-                                <a href="https://github.com/ryanduncuft/RTK" target="_blank" class="flex-1 py-2 px-4 bg-zinc-600 text-white text-center font-bold rounded-lg transition-colors hover:bg-zinc-700">Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div data-anim-item class="group bg-zinc-800 border border-zinc-700 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-sky-500/50 hover:shadow-xl hover:shadow-sky-500/10 flex flex-col md:flex-row">
-                        <div class="overflow-hidden md:w-1/3 lg:w-2/5 flex-shrink-0">
-                            <img src="images/Projects/reflex interactive.png" alt="Reflex Interactive Website" class="w-full h-48 md:h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        </div>
-                        <div class="p-6 space-y-4 flex-1 flex flex-col">
-                            <h3 class="text-2xl font-semibold text-white">Reflex Interactive Website</h3>
-                            <p class="text-zinc-300 leading-relaxed flex-grow">A website for my indie game studio, Reflex Interactive. (Work in Progress)</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="tech-tag">Tailwind CSS</span>
-                            </div>
-                            <div class="flex space-x-4 pt-2">
-                                <a href="https://reflexinteractive.netlify.app" target="_blank" class="flex-1 py-2 px-4 bg-sky-500 text-white text-center font-bold rounded-lg transition-colors hover:bg-sky-600">Live Website</a>
-                                <a href="https://github.com/ryanduncuft/Reflex-Interactive-Website.git" target="_blank" class="flex-1 py-2 px-4 bg-zinc-600 text-white text-center font-bold rounded-lg transition-colors hover:bg-zinc-700">Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div data-anim-item class="group bg-zinc-800 border border-zinc-700 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-sky-500/50 hover:shadow-xl hover:shadow-sky-500/10 flex flex-col md:flex-row">
-                        <div class="overflow-hidden md:w-1/3 lg:w-2/5 flex-shrink-0">
-                            <img src="images/Projects/ryzeplus.png" alt="RTKPlus Website" class="w-full h-48 md:h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        </div>
-                        <div class="p-6 space-y-4 flex-1 flex flex-col">
-                            <h3 class="text-2xl font-semibold text-white">RTKPlus Website</h3>
-                            <p class="text-zinc-300 leading-relaxed flex-grow">A subscription-based platform for exclusive music and content. (Work in Progress)</T>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Supabase</span>
-                                <span class="tech-tag">Tailwind CSS</span>
-                            </div>
-                            <div class="flex space-x-4 pt-2">
-                                <span class="flex-1 py-2 px-4 bg-zinc-700 text-zinc-400 text-center font-bold rounded-lg cursor-not-allowed">In Development</span>
-                            </div>
-                        </div>
-                    </div>
+        <article class="col">
+          <div class="card project-card h-100 border-0 shadow-sm overflow-hidden">
+            <img src="images/projects/ryzeplus.png" loading="lazy" decoding="async" class="card-img-top" alt="RTKPlus project" />
+            <div class="card-body">
+              <h2 class="h5">RTKPlus Subscription Platform</h2>
+              <p class="text-secondary">Prototype platform for premium users. React & Supabase model with content gating.</p>
+              <small class="text-pink">React • Supabase</small>
+            </div>
+            <div class="card-footer bg-transparent border-top-0 d-flex gap-2">
+              <a class="btn btn-secondary btn-sm flex-fill disabled" aria-disabled="true">Coming</a>
+              <a href="https://github.com/ryanduncuft/RTKPlus" target="_blank" class="btn btn-outline-secondary btn-sm flex-fill">Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-                    </div>
-            </section>
+    <section class="container mt-5 text-center">
+      <h3 class="h5">Want a similar solution?</h3>
+      <a href="index.html#contact" class="btn btn-pink btn-lg mt-3">Contact Me</a>
+    </section>
+  </main>
 
-        </main>
-        
-        <div id="footer-container"></div>
-    </div>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="js/app.js" type="module"></script>
+  <footer class="text-center py-4 text-muted border-top border-secondary">
+    © <span id="currentYear"></span> Ryan Duncuft. Built for speed and simplicity.
+  </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="js/app.js" defer></script>
 </body>
 </html>

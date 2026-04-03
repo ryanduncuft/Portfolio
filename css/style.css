@@ -1,0 +1,169 @@
+/* style.css - modern Bootstrap accent and performance-focused styles */
+
+:root {
+  --bs-body-bg: #0b0b12;
+  --bs-body-color: #e9ecef;
+  --bs-primary: #dc2658;
+  --bs-secondary: #e86fa7;
+  --bs-link-color: #ff7ab8;
+  --bs-border-color: #343a40;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #ca1f4c;
+}
+
+.dark-mode {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #1b1f2b 0%, #0a0a11 55%, #060609 100%);
+  color: var(--bs-body-color);
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+.mt-navbar {
+  margin-top: 6.5rem;
+}
+
+.hero-section {
+  min-height: 70vh;
+  background: linear-gradient(100deg, rgba(220,38,88,0.6), rgba(37, 45, 64, 0.7)), url('images/projects/reflex interactive.png') no-repeat center/cover;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255,20,90,0.35), rgba(11,11,18,0.8));
+  z-index: 0;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 1.6vw + 1rem, 2.2rem);
+  color: #fff;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.text-pink {
+  color: var(--bs-primary) !important;
+}
+
+.bg-pink {
+  background-color: var(--bs-primary) !important;
+}
+
+.btn-pink,
+.btn-outline-pink {
+  border: 1px solid var(--bs-primary);
+  color: var(--bs-primary);
+}
+
+.btn-pink {
+  background-color: var(--bs-primary);
+  color: #fff;
+}
+
+.btn-pink:hover,
+.btn-outline-pink:hover {
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bs-btn-hover-bg);
+  color: #fff;
+}
+
+.btn-outline-pink {
+  background-color: transparent;
+}
+
+.btn-outline-pink {color: var(--bs-primary);}
+
+.btn-outline-pink:hover {color: #fff;}
+
+.card.project-card,
+.card.experience-card {
+  background: rgba(22, 25, 45, 0.71);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.project-card:hover,
+.card.experience-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 35px rgba(120, 51, 92, 0.25);
+}
+
+.avatar {
+  width: clamp(180px, 35vw, 300px);
+  height: clamp(180px, 35vw, 300px);
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(220,38,88,0.35);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+}
+
+.loader-overlay {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(8px);
+  background-color: rgba(7, 8, 15, 0.86);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 320ms ease;
+}
+
+.loader-overlay.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader-inner {
+  text-align: center;
+  color: #e9ecef;
+  width: min(320px, 92vw);
+}
+
+.loader-text {
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.loader-bar {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.loader-progress {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--bs-primary), #ff8abf);
+  transition: width 1.2s ease-in-out;
+}
+
+.link-hover:hover {
+  color: var(--bs-primary) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
